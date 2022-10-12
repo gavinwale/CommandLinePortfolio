@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type"
+		content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width,
+		minimum-scale=1,initial-scale=1">
+
+	<script src=
+		"https://code.jquery.com/jquery-3.3.1.min.js">
+	</script>
+
+	<script src=
+"https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js">
+	</script>
+
+	<link rel="stylesheet" href=
+"https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+
+	<style type="text/css">
+		.terminal,
+		span,
+		.cmd,
+		div {
+			--color: rgba(0, 128, 0, 0.99);
+		}
+
+		.terminal,
+		span {
+			--size: 1.4;
+		}
+	</style>
+
+    <style>
+        .terminal {
+        --color: black;
+        --background: white;
+        --animation: terminal-bar;
+    }
+    </style>
+
+</head>
+
+<body style="background-color:grey">
+	<script>
+		$('body').terminal({
+			iam: function (name) {
+				this.echo('Hello, ' + name +
+					'. Welcome to GeeksForGeeks');
+			},
+
+            about: function () {
+                this.echo("NCAA Division I College Football student-athlete. High energy, great"
+                            + " attention to detail, and excellent work ethic.\n\n"
+                            + "Enjoys working with blockchain technology, parallel computing, ethical"
+                            + " hacking and theory/analysis of mechanical systems.");
+            },
+
+            skills: function () {
+                this.echo("Solidity, Java, C++, C, SQL, JavaScript, Design, Arduino,"
+                            + "MachineDesign, Leadership, DecisionMaking, \nCommunication, Teamwork"
+                            + "Organization, Graphics, PenTesting, CUDA, MPI, Bash, vim");
+            },
+
+            experience: function () {
+                this.echo("");
+            },
+
+            snake: function() {
+                this.echo("Loading snake game...\n");
+            },
+
+			founder: function () {
+				this.echo('Sandeep Jain');
+			},
+			help: function () {
+				this.echo("\nCommands:\n"
+				            + " about\n"
+                            + " skills\n"
+                            + " experience\n"
+                            + " education\n"
+                            + " projects\n"
+                            + " snake\n"
+                            + " help (prints this menu)\n\n");
+			},
+		}, {
+			greetings: "Gavin Wale's Portfolio\n\n"
+				+ "Commands:\n"
+				+ " about\n"
+                + " skills\n"
+                + " experience\n"
+                + " education\n"
+                + " projects\n"
+                + " snake\n"
+                + " help (prints this menu)"
+		});
+	</script>
+</body>
+
+</html>
