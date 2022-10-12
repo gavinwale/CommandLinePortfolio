@@ -19,36 +19,37 @@
 	<link rel="stylesheet" href=
 "https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
 
-	<style type="text/css">
-		.terminal,
-		span,
-		.cmd,
-		div {
-			--color: rgba(0, 128, 0, 0.99);
-		}
-
-		.terminal,
-		span {
-			--size: 1.4;
-		}
-	</style>
-
     <style>
         .terminal {
-        --color: black;
-        --background: white;
+        --color: rgb(106, 147, 179);
+        --background: black;
         --animation: terminal-bar;
     }
     </style>
 
 </head>
 
-<body style="background-color:grey">
+	<script src="snake.js"></script>
+
+<snake>
+	<div class="scoreDisplay"></div>
+	<div class="grid"></div>
+	<div class="button">
+  		<button class="top">top</button>
+  		<button class="bottom">bottom</button>
+  		<button class="left">left</button>
+  		<button class="right">right</button>
+	</div>
+	<div class="popup">
+  		<button class="playAgain">play Again</button>
+	</div>
+</snake>
+
+<body>
 	<script>
 		$('body').terminal({
-			iam: function (name) {
-				this.echo('Hello, ' + name +
-					'. Welcome to GeeksForGeeks');
+			whoami: function () {
+				this.echo("gavinwale");
 			},
 
             about: function () {
